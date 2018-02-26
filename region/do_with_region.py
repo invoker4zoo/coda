@@ -9,7 +9,8 @@
 @ time: 18-2-25
 """
 import json
-from point_trans import wgs84tobd09
+
+from util.point_trans import wgs84tobd09
 
 file_list = ['主城分区.json', '组团.json', '主城小区.json']
 output_file = ['region_1.json', 'region_2.json', 'region_3.json']
