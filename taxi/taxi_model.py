@@ -9,6 +9,8 @@
 @ time: 18-2-7
 """
 from db_tool import PgUtil
+import json
+import os
 # init
 pg = PgUtil()
 DATE_LIST = ['20170301','20170302','20170303','20170304','20170305','20170306','20170307']
@@ -24,7 +26,7 @@ END_POSITION_FILE = 'end_position.txt'
 UP_POSTION_FILE = 'up_position.txt'
 DOWN_POSITION_FILE = 'down_position.txt'
 STOP_POSITION_FILE = 'stop_position.txt'
-TAXI_ID_FILE = 'taxi_id.txt'
+TAXI_ID_FILE = 'data/taxi_id.txt'
 
 
 def search_taxi_id():
@@ -33,7 +35,7 @@ def search_taxi_id():
     result format:[{dict},]
     :return: taxi_id list
     """
-    sql = "select distinct(taxi_id) from taxi"
+    sql = "select distinct(taxi_id) from taxi_1"
     result = pg.query_all_sql(sql)
     return [item['taxi_id'] for item in result]
 
@@ -127,19 +129,80 @@ def search_taxi_position_by_taxi_id(taxi_id):
             pass
 
 
+def search_taxi_position_by_time(step=1):
+    """
+
+    :param step:
+    :return:
+    """
+    position_list_1 = []
+    position_list_2 = []
+    position_list_3 = []
+    # with open(TAXI_ID_FILE,'r') as f:
+    #     id_list = f.readlines()
+    id_list = search_taxi_id()
+    for id in id_list:
+        sql = """
+                select * from taxi_1 where taxi_id=%s order by gps_time limit 3
+              """
+        res = pg.select_all_sql(sql,(id,))
+        if res:
+            position_list_1.append([res[0]['longitude'], res[0]['latitude'], 1])
+            position_list_2.append([res[1]['longitude'], res[0]['latitude'], 1])
+            position_list_3.append([res[2]['longitude'], res[0]['latitude'], 1])
+    with open('data/taxi_position_1.json', 'w') as f:
+        f.write(json.dumps(position_list_1,ensure_ascii=False,indent=1))
+    with open('data/taxi_position_2.json', 'w') as f:
+        f.write(json.dumps(position_list_2,ensure_ascii=False,indent=1))
+    with open('data/taxi_position_3.json', 'w') as f:
+        f.write(json.dumps(position_list_3,ensure_ascii=False,indent=1))
+
+
+def search_taxi_behavior(sample_taxi_id_list):
+    """
+
+    :param sample_taxi_id_list: 抽样出租车id列表
+    :return:
+    """
+    for id in sample_taxi_id_list:
+        taxi_info = {
+            'route': [],
+            'upPoint': [],
+            'downPoint': [],
+            'stopPoint': []
+        }
+        sql = """
+            select * from taxi_1 where taxi_id=%s order by gps_time
+          """
+        res = pg.select_all_sql(sql,(id,))
+        for idx,val in enumerate(res):
+            taxi_info['route'].append([res[idx]['longitude'], res[idx]['latitude']])
+        up_index_list, down_index_list = find_up_down_index(res)
+        for index in up_index_list:
+            taxi_info['upPoint'].append([res[index]['longitude'], res[index]['latitude']])
+        for index in down_index_list:
+            taxi_info['downPoint'].append([res[index]['longitude'], res[index]['latitude']])
+        for index in find_stop_position_index(res,step=20):
+            taxi_info['stopPoint'].append([res[index]['longitude'], res[index]['latitude']])
+        with open('data/' +id + '.json', 'w') as f:
+            f.write(json.dumps(taxi_info,ensure_ascii=False,indent=1))
+
 if __name__=='__main__':
     # id_list = search_taxi_id()
     # write_taxi_id(id_list)
     # for id in id_list:
     #     search_taxi_position_by_taxi_id(id)
     # No.2262 2018-2-11
-    with open(TAXI_ID_FILE,'r') as f:
-        id_list = f.readlines()
-
-        for index,id in enumerate(id_list):
-            if index<11:
-                pass
-            else:
-                print 'parse NO.%d taxi %s' %(index, id)
-                id = id.strip()
-                search_taxi_position_by_taxi_id(id)
+    # with open(TAXI_ID_FILE,'r') as f:
+    #     id_list = f.readlines()
+    #
+    #     for index,id in enumerate(id_list):
+    #         if index<11:
+    #             pass
+    #         else:
+    #             print 'parse NO.%d taxi %s' %(index, id)
+    #             id = id.strip()
+    #             search_taxi_position_by_taxi_id(id)
+    # search_taxi_position_by_time()
+    sample_taxi_id_list = ['0600315676', '0100502431', '0100001929','0100530221', '0100704026']
+    search_taxi_behavior(sample_taxi_id_list)

@@ -1,0 +1,362 @@
+[
+ {
+  "source": "巴南区", 
+  "target": "北碚区 ", 
+  "value": 1
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "大渡口区 ", 
+  "value": 2002
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "江北区 ", 
+  "value": 1330
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "九龙坡区 ", 
+  "value": 8651
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "南岸区 ", 
+  "value": 9911
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "沙坪坝区 ", 
+  "value": 1020
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "渝北区 ", 
+  "value": 881
+ }, 
+ {
+  "source": "巴南区", 
+  "target": "渝中区 ", 
+  "value": 4338
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "巴南区 ", 
+  "value": 13
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "大渡口区 ", 
+  "value": 39
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "江北区 ", 
+  "value": 220
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "九龙坡区 ", 
+  "value": 367
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "南岸区 ", 
+  "value": 27
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "沙坪坝区 ", 
+  "value": 3803
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "渝北区 ", 
+  "value": 2408
+ }, 
+ {
+  "source": "北碚区", 
+  "target": "渝中区 ", 
+  "value": 312
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "巴南区 ", 
+  "value": 1862
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "北碚区 ", 
+  "value": 70
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "江北区 ", 
+  "value": 773
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "九龙坡区 ", 
+  "value": 20238
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "南岸区 ", 
+  "value": 1256
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "沙坪坝区 ", 
+  "value": 2415
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "渝北区 ", 
+  "value": 870
+ }, 
+ {
+  "source": "大渡口区", 
+  "target": "渝中区 ", 
+  "value": 2437
+ }, 
+ {
+  "source": "江北区", 
+  "target": "巴南区 ", 
+  "value": 1163
+ }, 
+ {
+  "source": "江北区", 
+  "target": "北碚区 ", 
+  "value": 174
+ }, 
+ {
+  "source": "江北区", 
+  "target": "大渡口区 ", 
+  "value": 977
+ }, 
+ {
+  "source": "江北区", 
+  "target": "九龙坡区 ", 
+  "value": 7499
+ }, 
+ {
+  "source": "江北区", 
+  "target": "南岸区 ", 
+  "value": 8474
+ }, 
+ {
+  "source": "江北区", 
+  "target": "沙坪坝区 ", 
+  "value": 9491
+ }, 
+ {
+  "source": "江北区", 
+  "target": "渝北区 ", 
+  "value": 61914
+ }, 
+ {
+  "source": "江北区", 
+  "target": "渝中区 ", 
+  "value": 22040
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "巴南区 ", 
+  "value": 9395
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "北碚区 ", 
+  "value": 281
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "大渡口区 ", 
+  "value": 17164
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "江北区 ", 
+  "value": 8547
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "南岸区 ", 
+  "value": 13450
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "沙坪坝区 ", 
+  "value": 29759
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "渝北区 ", 
+  "value": 7801
+ }, 
+ {
+  "source": "九龙坡区", 
+  "target": "渝中区 ", 
+  "value": 28024
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "巴南区 ", 
+  "value": 10149
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "北碚区 ", 
+  "value": 16
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "大渡口区 ", 
+  "value": 942
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "江北区 ", 
+  "value": 8202
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "九龙坡区 ", 
+  "value": 12687
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "沙坪坝区 ", 
+  "value": 3334
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "渝北区 ", 
+  "value": 7595
+ }, 
+ {
+  "source": "南岸区", 
+  "target": "渝中区 ", 
+  "value": 21629
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "巴南区 ", 
+  "value": 647
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "北碚区 ", 
+  "value": 5752
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "大渡口区 ", 
+  "value": 2091
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "江北区 ", 
+  "value": 14615
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "九龙坡区 ", 
+  "value": 28818
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "南岸区 ", 
+  "value": 2277
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "渝北区 ", 
+  "value": 17740
+ }, 
+ {
+  "source": "沙坪坝区", 
+  "target": "渝中区 ", 
+  "value": 11041
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "巴南区 ", 
+  "value": 1066
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "北碚区 ", 
+  "value": 3978
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "大渡口区 ", 
+  "value": 992
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "江北区 ", 
+  "value": 55887
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "九龙坡区 ", 
+  "value": 7362
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "南岸区 ", 
+  "value": 7723
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "沙坪坝区 ", 
+  "value": 12474
+ }, 
+ {
+  "source": "渝北区", 
+  "target": "渝中区 ", 
+  "value": 21495
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "巴南区 ", 
+  "value": 4659
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "北碚区 ", 
+  "value": 94
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "大渡口区 ", 
+  "value": 2476
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "江北区 ", 
+  "value": 26065
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "九龙坡区 ", 
+  "value": 30784
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "南岸区 ", 
+  "value": 23170
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "沙坪坝区 ", 
+  "value": 11770
+ }, 
+ {
+  "source": "渝中区", 
+  "target": "渝北区 ", 
+  "value": 21755
+ }
+]

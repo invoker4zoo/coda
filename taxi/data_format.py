@@ -9,7 +9,7 @@
 @ time: 18-2-6
 """
 import os
-BASE_PATH = '/mnt/coda/运管局--出租车/出租车GPS-201703/07'
+BASE_PATH = '/mnt/coda/运管局--出租车/01'
 data_list = os.listdir(BASE_PATH)
 for data_file in data_list:
     with open(os.path.join(BASE_PATH,data_file),'r') as f:
@@ -18,5 +18,5 @@ for data_file in data_list:
         total = f.read()
         _total = total.replace(_char,'')
         with open(os.path.join(BASE_PATH, data_file), 'w') as g:
-            print 'copy taxi from ' + "'" + os.path.join(BASE_PATH, data_file) + "'" + " with delimiter ',';"
+            print 'copy taxi_1 from ' + "'" + os.path.join(BASE_PATH, data_file) + "'" + " with delimiter ',';"
             g.write(_total)
