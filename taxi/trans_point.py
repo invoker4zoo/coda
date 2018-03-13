@@ -10,6 +10,7 @@
 """
 import os
 import json
+import random
 
 lng_range = [106.2700, 106.7000]
 lat_range = [29.3200, 29.7500]
@@ -53,11 +54,14 @@ def main():
         base_name = file_name.split('.')[0]
         with open(os.path.join(base_path, file_name), 'r') as f:
             point_list = list()
-            for line in f.readlines():
-                point = [float(line.split(',')[0]), float(line.split(',')[1])]
+            line_list = random.sample(f.readlines(), 10000)
+            for line in line_list:
+                # point = [float(line.split(',')[0]), float(line.split(',')[1])]
+                point = [float(line.split(',')[0]), float(line.split(',')[1]), 1]
                 if check_point_range(point):
                     point_list.append(point)
-            trans_grid = put_point_in_grid(point_list)
+            # trans_grid = put_point_in_grid(point_list)
+            trans_grid = point_list
             with open(os.path.join(base_path, ('taxi_' + base_name + '.json')), 'w') as g:
                 g.write(json.dumps(trans_grid,ensure_ascii=False, indent=1))
                 

@@ -12,7 +12,7 @@ import os
 import sys
 import json
 
-PATH = '/home/showlove/coda/POI_TEST'
+PATH = 'POI'
 list = os.listdir(PATH)
 stations_dict = {}
 line_list = []
@@ -22,11 +22,14 @@ for item in list:
         with open(path, mode='r') as f:
             point_list = []
             data = json.loads(f.read())
-            for data_item in data['features']:
-                point_list.append([float(data_item['geometry']['x']), float(data_item['geometry']['y']), 1])
+            try:
+                for data_item in data['features']:
+                    point_list.append([float(data_item['geometry']['x']), float(data_item['geometry']['y']), 1])
 
-            with open(os.path.join(PATH + '/trans', '_'+item), 'w') as f:
-                f.write(json.dumps(point_list, ensure_ascii=False, indent=2))
+                with open(os.path.join(PATH + '/trans', '_'+item), 'w') as f:
+                    f.write(json.dumps(point_list, ensure_ascii=False, indent=2))
+            except:
+                continue
 
 # with open('./busline/union/lineUnion.json','w') as f:
 #     f.write(json.dumps(line_list,ensure_ascii=False,indent=4))
